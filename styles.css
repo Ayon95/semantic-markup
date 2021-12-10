@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* custom css variables that we can use throughout the stylesheet */
+:root {
+  --base-spacing: 4rem;
+  --header-height: 6rem;
+  --color-primary: blueviolet;
+  --color-text: #fff;
+}
+
+/* Generic styles */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  padding: 0 var(--base-spacing);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: 0 var(--base-spacing);
+  height: var(--header-height);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav__links {
+  display: flex;
+  gap: 3rem;
+}
+
+/* hero section */
+
+.hero {
+  height: calc(100vh - var(--header-height));
+}
+
+.hero__content {
+  margin-top: 22rem;
+}
+
+.hero__title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 2rem;
+  max-width: 50ch;
+  margin-bottom: var(--base-spacing);
+}
+
+/* Other sections */
+
+.generic-section {
+  background-color: rgb(218, 210, 255);
+  border-radius: 4px;
+  padding: var(--base-spacing);
+  margin-bottom: var(--base-spacing);
+}
+
+.generic-section--skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills {
+  display: flex;
+  gap: 2rem;
+}
+
+.generic-section__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.generic-section__description {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: calc(var(--base-spacing) / 2);
+  text-align: center;
+}
